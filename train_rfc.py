@@ -48,13 +48,19 @@ class Trainer():
 
 	def splitTrainTest(self, labels, features):
 
+		##Split data into train and test sets, then further split training data into 
+		##train and cross-validate sets
+
 		self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(features, 
 															labels, 
-															test_size=0.80)
+															test_size=0.001)
+		self.X_train, self.X_cv, self.y_train, self.y_cv = train_test_split(self.X_train, self.y_train, test_size=0.5)
 
 
 		print "number of loans in training set: " , len(self.y_train)
 		print "number of defaults in training set: ", np.sum(self.y_train == 0)
+		print "number of loans in CV set: " , len(self.y_cv)
+		print "number of defaults in CV set: ", np.sum(self.y_cv == 0)
 		print "number of loans in test set: " , len(self.y_test)
 		print "number of defaults in test set: ", np.sum(self.y_test == 0)
 
@@ -86,13 +92,15 @@ class Trainer():
 
 
 	def defineSVC(self, C=1.0, kernel='rbf', degree=3, gamma=0.0, coef0=0.0, shrinking=True, 
-				  probability=False, tol=0.01, cache_size=200, class_weight=None, verbose=True, 
+				  probability=False, tol=0.01, cache_size=200, class_weight='auto', verbose=True, 
 				  max_iter=-1, random_state=None):
 
 		print "Using a Support Vector Machine Classifier ..."
 		self.clf = SVC(C=C, kernel=kernel, degree=degree, gamma=gamma, coef0=coef0, shrinking=shrinking, 
 				  probability=probability, tol=tol, cache_size=cache_size, class_weight=class_weight, verbose=verbose, 
 				  max_iter=max_iter, random_state=random_state)
+
+		print self.clf.get_params()
 
 
 	def trainCLF(self):
@@ -136,49 +144,59 @@ class Trainer():
 		##0 mean, unit variance
 		self.X_train = preprocessing.scale(self.X_train)
 		self.X_test = preprocessing.scale(self.X_test)
+		self.X_cv = preprocessing.scale(self.X_cv)
 
 	def scaleSamplesToRange(self):
 		##Samples lie in range between 0 and 1
 		minMaxScaler = preprocessing.MinMaxScaler()
 		self.X_train = minMaxScaler.fit_transform(self.X_train)
 		self.X_test = minMaxScaler.fit_transform(self.X_test)
+		self.X_cv = minMaxScaler.fit_transform(self.X_cv)
 
 	def normalizeSamples(self):
 		##Unit norm
 		self.X_train = preprocessing.normalize(self.X_train, norm='l2')
 		self.X_test = preprocessing.normalize(self.X_test, norm='l2')
+		self.X_cv = preprocessing.normalize(self.X_cv, norm='l2')
 
 	def getRandomSamples(self, num_samples, X, y):
 		train_size = num_samples*1.0 / np.size(y)
-		X_subset, _X_test, y_subset, _y_test = train_test_split(X, y, test_size=train_size)
+		_X_test, X_subset, _y_test, y_subset = train_test_split(X, y, test_size=train_size)
 		return [X_subset, y_subset]
 
-	def computeLearningCurve(self, min_samples=1, max_samples=10000, step_size=100):
+	def computeLearningCurve(self, min_samples=10, max_samples=30000, step_size=1000):
 		##Store values in arrays to plot at the end
 		train_fpr = []
-		test_fpr = []
+		cv_fpr = []
 		num_samples = []
 
 		for n in np.arange(min_samples, max_samples, step_size):
 			training_data_subset = self.getRandomSamples(n, self.X_train, self.y_train)
 			X_train = training_data_subset[0]
 			y_train = training_data_subset[1]
+
+			print "\n\n # of training examples: ", len(y_train)
+			
+			print "\nTraining classifier on ", n, " samples ... "
+			self.clf.fit(X_train, y_train)
+			print "Training Scores: "
 			training_scores = self.getScores(X_train, y_train)
 			train_fpr.append(training_scores[1])
 
-			test_data_subset = self.getRandomSamples(n, self.X_test, self.y_test)
-			X_test = test_data_subset[0]
-			y_test = test_data_subset[1]
-			testing_scores = self.getScores(X_test, y_test)
-			test_fpr.append(testing_scores[1])
+			cv_data_subset = self.getRandomSamples(n, self.X_cv, self.y_cv)
+			X_cv = cv_data_subset[0]
+			y_cv = cv_data_subset[1]
+			print "Cross Validation Scores: "
+			cv_scores = self.getScores(X_cv, y_cv)
+			cv_fpr.append(cv_scores[1])
 
 			num_samples.append(n)
 
 		time_elapsed = time() - self.start_time
 		print "Time Elapsed: ", time_elapsed
 
-		#plt.plot(num_samples, train_fpr, 'red', label='train')
-		plt.plot(num_samples, test_fpr, 'blue', label='validation')
+		plt.plot(num_samples, train_fpr, 'red', label='train', linewidth=3)
+		plt.plot(num_samples, cv_fpr, 'blue', label='validation', linewidth=3)
 		plt.xlabel('# of Training Samples')
 		plt.ylabel('score')
 		plt.legend(loc='best')
@@ -192,6 +210,7 @@ class Trainer():
 		print "Reduced data down to ", self.pca.n_components_, " dimensions: "
 		print "Transforming test data ..."
 		self.X_test = self.pca.transform(self.X_test)
+		self.X_cv = self.pca.transform(self.X_cv)
 
 		time_elapsed = time() - self.start_time
 		print "Time Elapsed: ", time_elapsed
@@ -216,7 +235,18 @@ class Trainer():
 
 
 	def runSVCGridSearch(self):
-		
+		C_vals = [0.001, 0.01, 0.1, 0.5]
+		gamma_vals = [1E-4, 1E-3, 1E-2, 1E-1, 1]
+
+		for C in C_vals:
+			for gamma in gamma_vals:
+				print "\n\n C: ", C, "  gamma: ", gamma
+				self.defineSVC(C=C, gamma=gamma)
+				self.trainCLF()
+				print "Training Scores:"
+				self.getScores(self.X_train, self.y_train)
+				print "Testing Scores:"
+				self.getScores(self.X_cv, self.y_cv)
 
 
 	def computeROC(self):
@@ -229,10 +259,8 @@ class Trainer():
 		
 		for j in n:
 
-			clf = rfc(n_estimators=j, n_jobs=-1, verbose=3)
-			clf.fit(X_train, y_train)
-			pred_proba[j] = clf.predict_proba(X_test)
-			fpr[j], tpr[j], thresholds[j] = roc_curve(y_test, pred_proba[j][:, 1], pos_label=1)
+			pred_proba[j] = self.clf.predict_proba(self.X_cv)
+			fpr[j], tpr[j], thresholds[j] = roc_curve(self.y_cv, pred_proba[j][:, 1], pos_label=1)
 
 			# Plot of a ROC curve
 			#plt.figure()
@@ -267,16 +295,18 @@ class Trainer():
 
 
 trainer = Trainer()
-trainer.defineSVC()
+trainer.defineSVC(C=0.1, gamma=0.1)
 trainer.scaleSamplesToRange()
 trainer.standardizeSamples()
 trainer.runPCA(n_components=50)
+#trainer.runSVCGridSearch()
+trainer.computeLearningCurve()
 
-trainer.trainCLF()
-print "Training Scores:"
-trainer.getScores(trainer.X_train, trainer.y_train)
-print "Testing Scores:"
-trainer.getScores(trainer.X_test, trainer.y_test)
+#trainer.trainCLF()
+#print "Training Scores:"
+#trainer.getScores(trainer.X_train, trainer.y_train)
+#print "Testing Scores:"
+#trainer.getScores(trainer.X_test, trainer.y_test)
 #trainer.computeLearningCurve(1, 10000, 100)
 #trainer.runGridSearch()
 
