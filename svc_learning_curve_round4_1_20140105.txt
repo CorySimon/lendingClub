@@ -1,0 +1,1448 @@
+Loading Trainer Class...
+Loading Data...
+Data loaded. There are  100  dimensions
+Time Elapsed: 3.25 s
+number of loans in training set:  49568
+number of defaults in training set:  9329
+number of loans in CV set:  49569
+number of defaults in CV set:  9175
+number of loans in test set:  100
+number of defaults in test set:  21
+Time Elapsed: 5.78 s
+Using a Support Vector Machine Classifier ...
+{'kernel': 'rbf', 'C': 0.1, 'verbose': True, 'probability': False, 'degree': 3, 'shrinking': True, 'max_iter': -1, 'random_state': None, 'tol': 0.01, 'cache_size': 2000, 'coef0': 0.0, 'gamma': 0.1, 'class_weight': 'auto'}
+Running PCA Dimensionality Reduction with n_components =  50
+Reduced data down to  50  dimensions: 
+Transforming test data ...
+Time Elapsed: 8.85 s
+
+Training classifier on  10  samples ... 
+[LibSVM]*
+optimization finished, #iter = 9
+obj = -0.341998, rho = 0.079968
+nSV = 10, nBSV = 10
+Total nSV = 10
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 9.000
+tpr: 1.000
+fp: 0.000
+fpr: 0.000
+fn: 0.000
+fnr: 0.000
+tn: 1.000
+tnr: 1.000
+total default rate:  0.1
+algorithm's default rate:  0.0
+
+
+Time Elapsed: 9.09 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 7.000
+tpr: 1.000
+fp: 3.000
+fpr: 1.000
+fn: 0.000
+fnr: 0.000
+tn: 0.000
+tnr: 0.000
+total default rate:  0.3
+algorithm's default rate:  0.3
+
+
+Time Elapsed: 9.16 s
+
+Training classifier on  1010  samples ... 
+[LibSVM].
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 1009
+obj = -53.563562, rho = 0.568086
+nSV = 1010, nBSV = 1005
+Total nSV = 1010
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 840.000
+tpr: 1.000
+fp: 170.000
+fpr: 1.000
+fn: 0.000
+fnr: 0.000
+tn: 0.000
+tnr: 0.000
+total default rate:  0.168316831683
+algorithm's default rate:  0.168316831683
+
+
+Time Elapsed: 9.83 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 835.000
+tpr: 1.000
+fp: 176.000
+fpr: 1.000
+fn: 0.000
+fnr: 0.000
+tn: 0.000
+tnr: 0.000
+total default rate:  0.174085064293
+algorithm's default rate:  0.174085064293
+
+
+Time Elapsed: 10.09 s
+
+Training classifier on  2010  samples ... 
+[LibSVM]..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 2010
+obj = -116.673298, rho = 0.600919
+nSV = 2010, nBSV = 1962
+Total nSV = 2010
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1630.000
+tpr: 1.000
+fp: 380.000
+fpr: 1.000
+fn: 0.000
+fnr: 0.000
+tn: 0.000
+tnr: 0.000
+total default rate:  0.189054726368
+algorithm's default rate:  0.189054726368
+
+
+Time Elapsed: 11.64 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1613.000
+tpr: 1.000
+fp: 397.000
+fpr: 1.000
+fn: 0.000
+fnr: 0.000
+tn: 0.000
+tnr: 0.000
+total default rate:  0.197512437811
+algorithm's default rate:  0.197512437811
+
+
+Time Elapsed: 12.31 s
+
+Training classifier on  3010  samples ... 
+[LibSVM]...
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 3009
+obj = -174.076891, rho = 0.376954
+nSV = 3010, nBSV = 2924
+Total nSV = 3010
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2422.000
+tpr: 0.993
+fp: 531.000
+fpr: 0.928
+fn: 16.000
+fnr: 0.007
+tn: 41.000
+tnr: 0.072
+total default rate:  0.190033222591
+algorithm's default rate:  0.179817135117
+
+
+Time Elapsed: 15.42 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2417.000
+tpr: 0.989
+fp: 552.000
+fpr: 0.974
+fn: 26.000
+fnr: 0.011
+tn: 15.000
+tnr: 0.026
+total default rate:  0.188372093023
+algorithm's default rate:  0.185921185584
+
+
+Time Elapsed: 16.77 s
+
+Training classifier on  4010  samples ... 
+[LibSVM]....
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 4009
+obj = -220.800616, rho = -0.286815
+nSV = 4010, nBSV = 3831
+Total nSV = 4010
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 345.000
+tpr: 0.105
+fp: 12.000
+fpr: 0.017
+fn: 2949.000
+fnr: 0.895
+tn: 704.000
+tnr: 0.983
+total default rate:  0.17855361596
+algorithm's default rate:  0.0336134453782
+
+
+Time Elapsed: 22.33 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 240.000
+tpr: 0.074
+fp: 38.000
+fpr: 0.049
+fn: 2990.000
+fnr: 0.926
+tn: 742.000
+tnr: 0.951
+total default rate:  0.194513715711
+algorithm's default rate:  0.136690647482
+
+
+Time Elapsed: 24.71 s
+
+Training classifier on  5010  samples ... 
+[LibSVM].....
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 5010
+obj = -283.155262, rho = -0.007181
+nSV = 5010, nBSV = 4675
+Total nSV = 5010
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3366.000
+tpr: 0.824
+fp: 75.000
+fpr: 0.081
+fn: 720.000
+fnr: 0.176
+tn: 849.000
+tnr: 0.919
+total default rate:  0.184431137725
+algorithm's default rate:  0.0217959895379
+
+
+Time Elapsed: 33.06 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2243.000
+tpr: 0.548
+fp: 355.000
+fpr: 0.386
+fn: 1848.000
+fnr: 0.452
+tn: 564.000
+tnr: 0.614
+total default rate:  0.183433133733
+algorithm's default rate:  0.136643571978
+
+
+Time Elapsed: 36.80 s
+
+Training classifier on  6010  samples ... 
+[LibSVM].....
+Warning: using -h 0 may be faster
+*.*
+optimization finished, #iter = 6004
+obj = -332.185159, rho = -0.047225
+nSV = 6003, nBSV = 5534
+Total nSV = 6003
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2539.000
+tpr: 0.515
+fp: 79.000
+fpr: 0.073
+fn: 2387.000
+fnr: 0.485
+tn: 1005.000
+tnr: 0.927
+total default rate:  0.180366056572
+algorithm's default rate:  0.0301757066463
+
+
+Time Elapsed: 48.79 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1719.000
+tpr: 0.350
+fp: 222.000
+fpr: 0.203
+fn: 3198.000
+fnr: 0.650
+tn: 871.000
+tnr: 0.797
+total default rate:  0.181863560732
+algorithm's default rate:  0.114374034003
+
+
+Time Elapsed: 54.15 s
+
+Training classifier on  7010  samples ... 
+[LibSVM]......
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 6998
+obj = -398.881768, rho = -0.228452
+nSV = 7001, nBSV = 6307
+Total nSV = 7001
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 871.000
+tpr: 0.153
+fp: 37.000
+fpr: 0.028
+fn: 4822.000
+fnr: 0.847
+tn: 1280.000
+tnr: 0.972
+total default rate:  0.18787446505
+algorithm's default rate:  0.0407488986784
+
+
+Time Elapsed: 70.91 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 750.000
+tpr: 0.131
+fp: 80.000
+fpr: 0.061
+fn: 4956.000
+fnr: 0.869
+tn: 1224.000
+tnr: 0.939
+total default rate:  0.186019971469
+algorithm's default rate:  0.0963855421687
+
+
+Time Elapsed: 78.15 s
+
+Training classifier on  8010  samples ... 
+[LibSVM]........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 8008
+obj = -468.823635, rho = -0.155591
+nSV = 8003, nBSV = 6972
+Total nSV = 8003
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1510.000
+tpr: 0.234
+fp: 84.000
+fpr: 0.054
+fn: 4944.000
+fnr: 0.766
+tn: 1472.000
+tnr: 0.946
+total default rate:  0.194257178527
+algorithm's default rate:  0.0526976160602
+
+
+Time Elapsed: 100.16 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1183.000
+tpr: 0.182
+fp: 145.000
+fpr: 0.096
+fn: 5312.000
+fnr: 0.818
+tn: 1370.000
+tnr: 0.904
+total default rate:  0.189138576779
+algorithm's default rate:  0.109186746988
+
+
+Time Elapsed: 109.69 s
+
+Training classifier on  9010  samples ... 
+[LibSVM]........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 8989
+obj = -508.509558, rho = -0.358341
+nSV = 8967, nBSV = 7764
+Total nSV = 8967
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1079.000
+tpr: 0.147
+fp: 69.000
+fpr: 0.041
+fn: 6237.000
+fnr: 0.853
+tn: 1625.000
+tnr: 0.959
+total default rate:  0.188013318535
+algorithm's default rate:  0.0601045296167
+
+
+Time Elapsed: 137.92 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 888.000
+tpr: 0.121
+fp: 117.000
+fpr: 0.070
+fn: 6459.000
+fnr: 0.879
+tn: 1546.000
+tnr: 0.930
+total default rate:  0.184572697003
+algorithm's default rate:  0.116417910448
+
+
+Time Elapsed: 150.44 s
+
+Training classifier on  10010  samples ... 
+[LibSVM].........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 9968
+obj = -567.244489, rho = -0.358690
+nSV = 9954, nBSV = 8544
+Total nSV = 9954
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1175.000
+tpr: 0.145
+fp: 76.000
+fpr: 0.040
+fn: 6945.000
+fnr: 0.855
+tn: 1814.000
+tnr: 0.960
+total default rate:  0.188811188811
+algorithm's default rate:  0.0607513988809
+
+
+Time Elapsed: 184.67 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1041.000
+tpr: 0.127
+fp: 124.000
+fpr: 0.069
+fn: 7164.000
+fnr: 0.873
+tn: 1681.000
+tnr: 0.931
+total default rate:  0.18031968032
+algorithm's default rate:  0.10643776824
+
+
+Time Elapsed: 199.29 s
+
+Training classifier on  11010  samples ... 
+[LibSVM]..........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 10976
+obj = -621.160382, rho = -0.364433
+nSV = 10943, nBSV = 9494
+Total nSV = 10943
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1361.000
+tpr: 0.152
+fp: 95.000
+fpr: 0.046
+fn: 7574.000
+fnr: 0.848
+tn: 1980.000
+tnr: 0.954
+total default rate:  0.188465031789
+algorithm's default rate:  0.0652472527473
+
+
+Time Elapsed: 241.34 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1153.000
+tpr: 0.129
+fp: 144.000
+fpr: 0.069
+fn: 7762.000
+fnr: 0.871
+tn: 1951.000
+tnr: 0.931
+total default rate:  0.190281562216
+algorithm's default rate:  0.111025443331
+
+
+Time Elapsed: 259.31 s
+
+Training classifier on  12010  samples ... 
+[LibSVM]...........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 11968
+obj = -675.256137, rho = -0.344212
+nSV = 11925, nBSV = 10365
+Total nSV = 11925
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1556.000
+tpr: 0.159
+fp: 119.000
+fpr: 0.053
+fn: 8206.000
+fnr: 0.841
+tn: 2129.000
+tnr: 0.947
+total default rate:  0.187177352206
+algorithm's default rate:  0.0710447761194
+
+
+Time Elapsed: 311.44 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1418.000
+tpr: 0.145
+fp: 164.000
+fpr: 0.073
+fn: 8353.000
+fnr: 0.855
+tn: 2075.000
+tnr: 0.927
+total default rate:  0.186427976686
+algorithm's default rate:  0.103666245259
+
+
+Time Elapsed: 333.12 s
+
+Training classifier on  13010  samples ... 
+[LibSVM]............
+Warning: using -h 0 may be faster
+**.*
+optimization finished, #iter = 12956
+obj = -728.253025, rho = -0.365432
+nSV = 12897, nBSV = 11271
+Total nSV = 12897
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1935.000
+tpr: 0.183
+fp: 138.000
+fpr: 0.057
+fn: 8635.000
+fnr: 0.817
+tn: 2302.000
+tnr: 0.943
+total default rate:  0.187548039969
+algorithm's default rate:  0.0665701881331
+
+
+Time Elapsed: 394.64 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 1662.000
+tpr: 0.156
+fp: 190.000
+fpr: 0.081
+fn: 8988.000
+fnr: 0.844
+tn: 2170.000
+tnr: 0.919
+total default rate:  0.181398923905
+algorithm's default rate:  0.102591792657
+
+
+Time Elapsed: 419.47 s
+
+Training classifier on  14010  samples ... 
+[LibSVM].............
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 13976
+obj = -790.716820, rho = -0.326950
+nSV = 13873, nBSV = 11964
+Total nSV = 13873
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2501.000
+tpr: 0.220
+fp: 194.000
+fpr: 0.073
+fn: 8852.000
+fnr: 0.780
+tn: 2463.000
+tnr: 0.927
+total default rate:  0.189650249822
+algorithm's default rate:  0.0719851576994
+
+
+Time Elapsed: 489.38 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2192.000
+tpr: 0.192
+fp: 266.000
+fpr: 0.103
+fn: 9232.000
+fnr: 0.808
+tn: 2320.000
+tnr: 0.897
+total default rate:  0.184582441113
+algorithm's default rate:  0.108218063466
+
+
+Time Elapsed: 517.74 s
+
+Training classifier on  15010  samples ... 
+[LibSVM]..............
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 14901
+obj = -829.693858, rho = -0.301484
+nSV = 14840, nBSV = 12808
+Total nSV = 14840
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2890.000
+tpr: 0.236
+fp: 216.000
+fpr: 0.078
+fn: 9335.000
+fnr: 0.764
+tn: 2569.000
+tnr: 0.922
+total default rate:  0.185542971352
+algorithm's default rate:  0.0695428203477
+
+
+Time Elapsed: 599.72 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2620.000
+tpr: 0.214
+fp: 345.000
+fpr: 0.123
+fn: 9595.000
+fnr: 0.786
+tn: 2450.000
+tnr: 0.877
+total default rate:  0.186209193871
+algorithm's default rate:  0.116357504216
+
+
+Time Elapsed: 632.65 s
+
+Training classifier on  16010  samples ... 
+[LibSVM]...............
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 15907
+obj = -883.975671, rho = -0.313816
+nSV = 15840, nBSV = 13661
+Total nSV = 15840
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2803.000
+tpr: 0.215
+fp: 195.000
+fpr: 0.066
+fn: 10247.000
+fnr: 0.785
+tn: 2765.000
+tnr: 0.934
+total default rate:  0.18488444722
+algorithm's default rate:  0.0650433622415
+
+
+Time Elapsed: 725.75 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2440.000
+tpr: 0.188
+fp: 276.000
+fpr: 0.092
+fn: 10572.000
+fnr: 0.812
+tn: 2722.000
+tnr: 0.908
+total default rate:  0.187257963773
+algorithm's default rate:  0.101620029455
+
+
+Time Elapsed: 764.35 s
+
+Training classifier on  17010  samples ... 
+[LibSVM]................
+Warning: using -h 0 may be faster
+**.*
+optimization finished, #iter = 16957
+obj = -956.123206, rho = -0.273376
+nSV = 16838, nBSV = 14413
+Total nSV = 16838
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3395.000
+tpr: 0.246
+fp: 259.000
+fpr: 0.080
+fn: 10395.000
+fnr: 0.754
+tn: 2961.000
+tnr: 0.920
+total default rate:  0.189300411523
+algorithm's default rate:  0.0708812260536
+
+
+Time Elapsed: 871.26 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3024.000
+tpr: 0.218
+fp: 354.000
+fpr: 0.114
+fn: 10871.000
+fnr: 0.782
+tn: 2761.000
+tnr: 0.886
+total default rate:  0.183127572016
+algorithm's default rate:  0.104795737123
+
+
+Time Elapsed: 913.38 s
+
+Training classifier on  18010  samples ... 
+[LibSVM].................
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 17881
+obj = -990.422089, rho = -0.391664
+nSV = 17751, nBSV = 15261
+Total nSV = 17751
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3039.000
+tpr: 0.207
+fp: 232.000
+fpr: 0.069
+fn: 11630.000
+fnr: 0.793
+tn: 3109.000
+tnr: 0.931
+total default rate:  0.185508051083
+algorithm's default rate:  0.0709263222256
+
+
+Time Elapsed: 1034.49 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 2787.000
+tpr: 0.191
+fp: 309.000
+fpr: 0.091
+fn: 11835.000
+fnr: 0.809
+tn: 3079.000
+tnr: 0.909
+total default rate:  0.188117712382
+algorithm's default rate:  0.0998062015504
+
+
+Time Elapsed: 1082.96 s
+
+Training classifier on  19010  samples ... 
+[LibSVM]..................
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 18863
+obj = -1058.072786, rho = -0.342712
+nSV = 18751, nBSV = 16023
+Total nSV = 18751
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3394.000
+tpr: 0.220
+fp: 240.000
+fpr: 0.067
+fn: 12036.000
+fnr: 0.780
+tn: 3340.000
+tnr: 0.933
+total default rate:  0.188321935823
+algorithm's default rate:  0.0660429279031
+
+
+Time Elapsed: 1219.87 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3124.000
+tpr: 0.201
+fp: 319.000
+fpr: 0.091
+fn: 12387.000
+fnr: 0.799
+tn: 3180.000
+tnr: 0.909
+total default rate:  0.184061020516
+algorithm's default rate:  0.0926517571885
+
+
+Time Elapsed: 1273.82 s
+
+Training classifier on  20010  samples ... 
+[LibSVM]...................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 19876
+obj = -1137.185424, rho = -0.234254
+nSV = 19707, nBSV = 16786
+Total nSV = 19707
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4540.000
+tpr: 0.281
+fp: 344.000
+fpr: 0.089
+fn: 11607.000
+fnr: 0.719
+tn: 3519.000
+tnr: 0.911
+total default rate:  0.193053473263
+algorithm's default rate:  0.0704340704341
+
+
+Time Elapsed: 1427.64 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4168.000
+tpr: 0.255
+fp: 470.000
+fpr: 0.128
+fn: 12158.000
+fnr: 0.745
+tn: 3214.000
+tnr: 0.872
+total default rate:  0.184107946027
+algorithm's default rate:  0.101336783096
+
+
+Time Elapsed: 1487.91 s
+
+Training classifier on  21010  samples ... 
+[LibSVM]....................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 20857
+obj = -1143.653556, rho = -0.348745
+nSV = 20705, nBSV = 17770
+Total nSV = 20705
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3773.000
+tpr: 0.220
+fp: 255.000
+fpr: 0.066
+fn: 13395.000
+fnr: 0.780
+tn: 3587.000
+tnr: 0.934
+total default rate:  0.182865302237
+algorithm's default rate:  0.0633068520357
+
+
+Time Elapsed: 1662.00 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 3442.000
+tpr: 0.201
+fp: 389.000
+fpr: 0.101
+fn: 13698.000
+fnr: 0.799
+tn: 3481.000
+tnr: 0.899
+total default rate:  0.184198000952
+algorithm's default rate:  0.101540067867
+
+
+Time Elapsed: 1730.56 s
+
+Training classifier on  22010  samples ... 
+[LibSVM].....................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 21862
+obj = -1244.202025, rho = -0.268695
+nSV = 21610, nBSV = 18444
+Total nSV = 21610
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5087.000
+tpr: 0.287
+fp: 401.000
+fpr: 0.094
+fn: 12663.000
+fnr: 0.713
+tn: 3859.000
+tnr: 0.906
+total default rate:  0.193548387097
+algorithm's default rate:  0.0730685131195
+
+
+Time Elapsed: 1919.78 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4632.000
+tpr: 0.258
+fp: 519.000
+fpr: 0.129
+fn: 13355.000
+fnr: 0.742
+tn: 3504.000
+tnr: 0.871
+total default rate:  0.182780554294
+algorithm's default rate:  0.100757134537
+
+
+Time Elapsed: 1994.06 s
+
+Training classifier on  23010  samples ... 
+[LibSVM]......................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 22805
+obj = -1271.535278, rho = -0.392046
+nSV = 22608, nBSV = 19336
+Total nSV = 22608
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4345.000
+tpr: 0.232
+fp: 359.000
+fpr: 0.083
+fn: 14348.000
+fnr: 0.768
+tn: 3958.000
+tnr: 0.917
+total default rate:  0.187614080834
+algorithm's default rate:  0.0763180272109
+
+
+Time Elapsed: 2206.97 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4089.000
+tpr: 0.217
+fp: 441.000
+fpr: 0.105
+fn: 14718.000
+fnr: 0.783
+tn: 3762.000
+tnr: 0.895
+total default rate:  0.182659713168
+algorithm's default rate:  0.0973509933775
+
+
+Time Elapsed: 2287.98 s
+
+Training classifier on  24010  samples ... 
+[LibSVM].......................
+Warning: using -h 0 may be faster
+**.*
+optimization finished, #iter = 23762
+obj = -1334.508661, rho = -0.300958
+nSV = 23529, nBSV = 20064
+Total nSV = 23529
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5355.000
+tpr: 0.275
+fp: 409.000
+fpr: 0.090
+fn: 14093.000
+fnr: 0.725
+tn: 4153.000
+tnr: 0.910
+total default rate:  0.190004164931
+algorithm's default rate:  0.0709576682859
+
+
+Time Elapsed: 2531.29 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 4797.000
+tpr: 0.245
+fp: 558.000
+fpr: 0.126
+fn: 14777.000
+fnr: 0.755
+tn: 3878.000
+tnr: 0.874
+total default rate:  0.18475635152
+algorithm's default rate:  0.104201680672
+
+
+Time Elapsed: 2624.74 s
+
+Training classifier on  25010  samples ... 
+[LibSVM]........................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 24732
+obj = -1382.248579, rho = -0.273409
+nSV = 24514, nBSV = 20953
+Total nSV = 24514
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5997.000
+tpr: 0.295
+fp: 423.000
+fpr: 0.090
+fn: 14303.000
+fnr: 0.705
+tn: 4287.000
+tnr: 0.910
+total default rate:  0.188324670132
+algorithm's default rate:  0.0658878504673
+
+
+Time Elapsed: 2887.77 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5489.000
+tpr: 0.270
+fp: 658.000
+fpr: 0.140
+fn: 14823.000
+fnr: 0.730
+tn: 4040.000
+tnr: 0.860
+total default rate:  0.187844862055
+algorithm's default rate:  0.107044086546
+
+
+Time Elapsed: 2984.97 s
+
+Training classifier on  26010  samples ... 
+[LibSVM].........................
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 25722
+obj = -1435.126820, rho = -0.377608
+nSV = 25449, nBSV = 21697
+Total nSV = 25449
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5660.000
+tpr: 0.268
+fp: 488.000
+fpr: 0.099
+fn: 15440.000
+fnr: 0.732
+tn: 4422.000
+tnr: 0.901
+total default rate:  0.188773548635
+algorithm's default rate:  0.0793754066363
+
+
+Time Elapsed: 3267.47 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 5230.000
+tpr: 0.246
+fp: 663.000
+fpr: 0.139
+fn: 16012.000
+fnr: 0.754
+tn: 4105.000
+tnr: 0.861
+total default rate:  0.183314109958
+algorithm's default rate:  0.112506363482
+
+
+Time Elapsed: 3380.11 s
+
+Training classifier on  27010  samples ... 
+[LibSVM]..........................
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 26675
+obj = -1487.446882, rho = -0.263576
+nSV = 26366, nBSV = 22405
+Total nSV = 26366
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 6946.000
+tpr: 0.317
+fp: 501.000
+fpr: 0.098
+fn: 14953.000
+fnr: 0.683
+tn: 4610.000
+tnr: 0.902
+total default rate:  0.189226212514
+algorithm's default rate:  0.067275412918
+
+
+Time Elapsed: 3694.71 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 6330.000
+tpr: 0.288
+fp: 741.000
+fpr: 0.147
+fn: 15656.000
+fnr: 0.712
+tn: 4283.000
+tnr: 0.853
+total default rate:  0.186005183265
+algorithm's default rate:  0.104794229953
+
+
+Time Elapsed: 3805.36 s
+
+Training classifier on  28010  samples ... 
+[LibSVM]...........................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 27685
+obj = -1531.582780, rho = -0.222673
+nSV = 27361, nBSV = 23297
+Total nSV = 27361
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 7951.000
+tpr: 0.349
+fp: 588.000
+fpr: 0.112
+fn: 14824.000
+fnr: 0.651
+tn: 4647.000
+tnr: 0.888
+total default rate:  0.186897536594
+algorithm's default rate:  0.0688605223094
+
+
+Time Elapsed: 4122.03 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 7217.000
+tpr: 0.315
+fp: 849.000
+fpr: 0.166
+fn: 15673.000
+fnr: 0.685
+tn: 4271.000
+tnr: 0.834
+total default rate:  0.18279186005
+algorithm's default rate:  0.10525663278
+
+
+Time Elapsed: 4241.19 s
+
+Training classifier on  29010  samples ... 
+[LibSVM]............................
+Warning: using -h 0 may be faster
+**.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 28694
+obj = -1595.292262, rho = -0.311670
+nSV = 28311, nBSV = 24046
+Total nSV = 28311
+Training Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 6749.000
+tpr: 0.287
+fp: 535.000
+fpr: 0.098
+fn: 16797.000
+fnr: 0.713
+tn: 4930.000
+tnr: 0.902
+total default rate:  0.188376822585
+algorithm's default rate:  0.0734486545854
+
+
+Time Elapsed: 4575.49 s
+Cross Validation Scores:
+Running CLF ...
+tpr - predict paid actually paid
+fpr - predict paid actually default
+fnr - predict default actually paid
+tnr - predict default actually default
+tp: 6215.000
+tpr: 0.262
+fp: 699.000
+fpr: 0.132
+fn: 17480.000
+fnr: 0.738
+tn: 4616.000
+tnr: 0.868
+total default rate:  0.183212685281
+algorithm's default rate:  0.101099218976
+
+
+Time Elapsed: 4707.86 s
+Time Elapsed: 4707.86 s

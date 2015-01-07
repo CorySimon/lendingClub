@@ -1,0 +1,19 @@
+Loading Trainer Class...
+Loading Data...
+Data loaded. There are  100  dimensions
+Time Elapsed: 3.15 s
+number of loans in training set:  49568
+number of defaults in training set:  9167
+number of loans in CV set:  49569
+number of defaults in CV set:  9344
+number of loans in test set:  100
+number of defaults in test set:  14
+Time Elapsed: 5.03 s
+Using a Support Vector Machine Classifier ...
+{'kernel': 'rbf', 'C': 0.1, 'verbose': True, 'probability': False, 'degree': 3, 'shrinking': True, 'max_iter': -1, 'random_state': None, 'tol': 0.01, 'cache_size': 2000, 'coef0': 0.0, 'gamma': 0.1, 'class_weight': 'auto'}
+Running PCA Dimensionality Reduction with n_components =  50
+Reduced data down to  50  dimensions: 
+Transforming test data ...
+Time Elapsed: 8.14 s
+
+Training classifier on  10  samples ... 
